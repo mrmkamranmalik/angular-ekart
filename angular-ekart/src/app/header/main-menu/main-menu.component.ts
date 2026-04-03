@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.css']
 })
-export class MainMenuComponent implements OnInit {
+export class MainMenuComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  mainMenuItems : string[] = ["Home","Products","Sale","New Arrival","Contact"]
 
 }

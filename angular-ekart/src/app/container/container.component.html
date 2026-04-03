@@ -1,0 +1,42 @@
+<!-- One way Data Binding -->
+
+<div class="ekart-product-container">
+  <!-- Data Binding with Property Binding : Html Property represents the current value and can change -->
+  <!--<img [src]="product.pImage" width="150" height="150" />-->
+
+  <!-- Data Biding with String Interpolation -->
+  <!--<p>Name: {{product.name}}</p>
+  <p>Price: {{ '$' + product.price}}</p>
+  <p>Color: {{product.color}}</p>
+  <p>Discounted Price: {{'$' + getDiscountedPrice().toFixed(2)}}</p>
+  <p>{{product.inStock > 0 ? 'Only ' + product.inStock + ' items left' : 'Not in Stock'}}</p>-->
+
+  <!--
+  String interpolation will not work with hidden, disabled and checked Html Properties.
+  So here we will use the property binding.
+  It is best practice to use Property Binding with Html Properties.
+  -->
+  <!--<button [disabled]="product.inStock <= 0" class="btn btn-primary"> Buy Now</button>-->
+
+  <!-- We can use bind prefix also with any Html Properties for Property binding insetead of square brackets [] -->
+  <!--<input bind-value ="name" />-->
+
+  <!-- Attribute Binding : Html Attribute represent the initial value and does not change -->
+  <!--<input [value] = "name" [attr.area-label] = ""  />-->
+
+  <!-- Event Binding -->
+  <!--<input [value]="name" (input)="onNameChange($event)" />
+  <p>Name = {{name}}</p>-->
+
+  <!-- Put all togather Data Binding -->
+  <!--<button [disabled]="product.inStock <= 0 || addToCart <= 0" (click)="decrementCartValue()">-</button>
+  <span>{{addToCart}}</span>
+  <button [disabled]="addToCart >= product.inStock" (click)="incrementCartValue()">+</button>-->
+  <app-search></app-search>
+  <product-list></product-list>
+  <!-- Use of structual Directive -->
+  <!--<div *ngFor="let item of listOfString">
+    <p>Current element of array is : {{item}}</p>
+  </div>-->
+</div>
+
